@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo App</title>
+	<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+	<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCI7WTlqq4Jk4nxHlYPVhVbK5Pkgtkbc5M",
+    authDomain: "mobile-app-a6400.firebaseapp.com",
+    databaseURL: "https://mobile-app-a6400.firebaseio.com",
+    projectId: "mobile-app-a6400",
+    storageBucket: "mobile-app-a6400.appspot.com",
+    messagingSenderId: "213801923246",
+    appId: "1:213801923246:web:55231aac9d4a152158f33f",
+    measurementId: "G-NPLMZ0MMTS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+	  
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+		<div class="row">
+			<div class="intro col-12">
+				<h1>TODO APPLICATION</h1>
+				<div>
+					<div class="border1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<input id="todo-item" type="text" placeholder="New item..." maxlength="27">
+				<button id="enter" onclick="addTodo()"  onclick="remove()">ADD ITEMS</button>
+				<button id="deleteAll" onclick="deleteALL()" onclick="remove()">DELETE ALL</button>
+			</div>
+		</div>
+
+		<!-- Empty List -->
+		<div class="row">
+			<div class="listItems col-12">
+				<ul class="col-12 offset-0 col-sm-8 offset-sm-2" id="list">
+
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
